@@ -1,0 +1,25 @@
+<html>
+<h1>
+       Welcome to Authentification Service!
+</h1>
+
+
+        <form action = "/newEntry" method="POST">
+		<p><label for="ldap">Insert your LDAP here:</label>
+            <input type="text" id="ldap" name="ldap">
+        </p>
+        <p>
+		<label for="pw">Insert your password here:</label>
+		    <input type="text" id="pw" name="pw">
+        </p>
+		<h3>And press the submit button</h3>
+                <button type=”submit” class="btn btn-primary">SUBMIT!</button>
+        </form>
+<br>
+<h3>
+        Or check the database:
+</h3>
+        <form action = "/databaseViewer" method="GET">
+                <button type=”submit” class="btn btn-primary">DATABASE</button>
+        </form>
+</html>

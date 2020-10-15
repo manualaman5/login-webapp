@@ -1,0 +1,3 @@
+Make sure to change the details in main.py (db connection details for your cloud SQL instance and make sure you have permission)
+AND
+change details in commands.sh

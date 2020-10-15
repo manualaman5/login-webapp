@@ -1,0 +1,59 @@
+CTYPE html>
+<html>
+
+
+	<head>
+		   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		   {% if title %}
+		   <title>{{ title }}</title>
+			 {% else %}
+			       <title>Welcome to the hour control app</title>
+			       {% endif %}
+	</head>
+
+	<body>
+		<table class="steelBlueCols">
+
+			<!--- HERE IS THE HEAD  -->
+			<thead>
+				<tr>
+					<th>Hour control app</th>
+				</tr>
+			</thead>
+
+			<!--- HERE IS THE FOOTER  -->
+			<tfoot>
+				<tr>
+					<td colspan="1"><div>© Copyright 2019, All Rights Reserved</div>
+						<div class="links"><a href="https://www.facebook.com/manu.alaman" target="_blank"><img src="{{ url_for('static', filename='icons/facebook.png') }}" style="height:25px;width:25px"></a> <a href="https://www.linkedin.com/in/malaman-cs" target="_blank"><img src="{{ url_for('static', filename='icons/linkedin.png') }}" style="height:27px;width:27px"></a> <a href="http://manualaman.com/" target="_blank"><img src="{{ url_for('static', filename='icons/web.png') }}" style="height:27px;width:27px"></a></div>
+					</td>
+				</tr>
+			</tfoot>
+
+			<!--- HERE IS THE BODY  -->
+			<tbody>
+
+				<tr>
+					<td> {% with messages = get_flashed_messages() %}
+						        {% if messages %}
+							        <ul>
+									            {% for message in messages %}
+										                <li>{{ message }}</li>
+												            {% endfor %}
+													            </ul>
+														            {% endif %}
+															          {% endwith %}
+																          
+																        {% block content %}
+																	      {% endblock %}
+					</td>
+				</tr>
+
+			</tbody>
+
+		</table>
+
+
+	</body>
+</html>
+

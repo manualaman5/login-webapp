@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Analyzer set up</h1>
+    <p>Please select your user and introduce your password:</p>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.user.label }}<br>
+            {{ form.user(size=32) }}
+            
+            {% for error in form.user.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        
+        {% from "_formhelpers.html" import render_field %}
+
+        {% for field in users %}
+            {{ render_field(form[field], label_visible=True) }} 
+        {% endfor %}
+        
+	<p>{{ form.pw() }}</p>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+    {% endblock %}
