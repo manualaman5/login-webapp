@@ -1,4 +1,4 @@
-##Login web app
+#Login web app
 
 This is a web application developed in Python and meant to be built in Google Cloud. The web application registers users in a database with a new password every single day. There is a cloud function that sends those passwords over a private Google chat. The web application allows t
 he user to register the time when they log in and you can also see all the records from the login database.
