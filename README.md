@@ -1,4 +1,4 @@
-##Login web app
+#Login web app
 
 This is a web application developed in Python and meant to be built in Google Cloud. The web application registers users in a database with a new password every single day. There is a cloud function that sends those passwords over a private Google chat. The web application allows t
 he user to register the time when they log in and you can also see all the records from the login database.
@@ -45,7 +45,6 @@ The function ADDTIME adds two hours to the UTC time, it needs to be changed when
 
 Enter into the folder ‘loginAppEngine’ and:
 
-gcloud builds submit --tag gcr.io/wave34-webhelp-vrodrigu
-ez/nameOfTheImage
+gcloud builds submit --tag gcr.io/YOUR_PROJECT/nameOfTheImage
 
 8. Use cloud run: Create Service, choose region and service name, allow unauthenticated, next, select the image you just created and choose the latest version, show advanced settings, containerPort 5000, reduce maximum number of instances, connections, add cloudsql connections, click create.
