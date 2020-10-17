@@ -45,7 +45,6 @@ The function ADDTIME adds two hours to the UTC time, it needs to be changed when
 
 Enter into the folder ‘loginAppEngine’ and:
 
-gcloud builds submit --tag gcr.io/wave34-webhelp-vrodrigu
-ez/nameOfTheImage
+gcloud builds submit --tag gcr.io/YOUR_PROJECT/nameOfTheImage
 
 8. Use cloud run: Create Service, choose region and service name, allow unauthenticated, next, select the image you just created and choose the latest version, show advanced settings, containerPort 5000, reduce maximum number of instances, connections, add cloudsql connections, click create.
